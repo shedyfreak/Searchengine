@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main" accessibleRole="IMAGE_VIEW" prefHeight="661.0" prefWidth="772.0" style="-fx-background-color: E5FFDE;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bfh.ch.controller.ViewController">
+    <children>
+        <Button fx:id="findJobsButton" layoutX="667.0" layoutY="113.0" mnemonicParsing="false" onAction="#handleFindJobsAction" stylesheets="@../styles/Styles.css" text="find jobs">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <TextField fx:id="searchInput" layoutX="39.0" layoutY="111.0" prefHeight="36.0" prefWidth="622.0" promptText="search by keywoard" stylesheets="@../styles/Styles.css">
+            <cursor>
+                <Cursor fx:constant="TEXT" />
+            </cursor>
+        </TextField>
+        <ChoiceBox fx:id="language" accessibleRole="CHECK_BOX" layoutX="275.0" layoutY="187.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #9590A8;" value="language">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ChoiceBox>
+        <ChoiceBox fx:id="location" accessibleText="Location" layoutX="475.0" layoutY="187.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #9590A8;" value="location">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ChoiceBox>
+        <DatePicker fx:id="datePicker" layoutX="33.0" layoutY="189.0" promptText="pick a date " style="-fx-background-color: #9590A8;">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </DatePicker>
+        <ImageView fx:id="logo" fitHeight="94.0" fitWidth="441.0" layoutX="177.0" layoutY="11.0">
+            <image>
+                <Image url="@../logo.jpg" />
+            </image>
+        </ImageView>
+        <ListView fx:id="jobList" layoutX="12.0" layoutY="231.0" prefHeight="382.0" prefWidth="772.0" onMouseClicked="#handleSelectRow" style="-fx-background-color: #E5FFDE;" stylesheets="@../styles/Styles.css" />
+        <Label fx:id="languageLable" layoutX="293.0" layoutY="162.0" prefHeight="18.0" prefWidth="105.0" text="Language ">
+            <font>
+                <Font name="Franklin Gothic Medium" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="locationLable" layoutX="514.0" layoutY="162.0" text="Location">
+            <font>
+                <Font name="Franklin Gothic Medium" size="14.0" />
+            </font>
+        </Label>
+        <Button fx:id="detailedButton" layoutX="296.0" layoutY="613.0" mnemonicParsing="false" onAction="#handleDetailsAction" prefHeight="36.0" prefWidth="204.0" stylesheets="@../styles/Styles.css" text="view detailed offer">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Label layoutX="70.0" layoutY="162.0" prefHeight="18.0" prefWidth="87.0" text="starting from">
+            <font>
+                <Font name="Franklin Gothic Medium" size="14.0" />
+            </font>
+        </Label>
+      <ImageView fx:id="refreshButton" accessibleRole="BUTTON" fitHeight="30.0" fitWidth="34.0" layoutX="16.0" layoutY="14.0" onMouseClicked="#refreshMainView" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../refresh.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+    </children>
+</AnchorPane>
